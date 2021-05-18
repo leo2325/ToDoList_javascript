@@ -1,0 +1,115 @@
+@font-face {
+    font-family:"blacklist";
+    src: url(../fonts/Blacklist.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:"harvest";
+    src: url(../fonts/harvestital.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+html{
+  font-family: harvest;
+}
+/* Remove margins and padding from the list */
+ul {
+  width:80%;
+  margin:2em auto;
+  padding:0;
+}
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  list-style:none;
+  background-color:#eafff7;
+  padding:1em;
+  position: relative;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background-color:#cbffeb;
+}
+/* Darker background-color on hover */
+ul li:hover {
+  background-color:rgba(0, 0, 255, .2);
+}
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  text-decoration: line-through;
+}
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  transform: rotate(45deg);
+}
+/* Style the close button */
+.close {
+  font-family:blacklist;
+  padding:1.35em;
+  background-color:#f2cbff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.close:hover {
+  background-color:#a0f6d4;
+}
+/* Style the header */
+header{
+  width:90%;
+  margin:2em auto;
+  background-color:#eafff7;
+  box-shadow: 13px -13px 11px 0px #f2cbff;
+  border-radius: 5%;
+  text-align:center;
+}
+h1{
+  margin:0 auto;
+  padding:1em 0;
+  font-size:4em;
+  color:rgba(0, 0, 255, .2);
+  text-shadow:13px -13px 6px #a0f6d4;
+}
+.header{
+  height:5em;
+  margin:2em 0;
+}
+
+/* Style the input */
+input{
+  border:none;
+  margin:0;
+  width:70%;
+  padding:1em;
+}
+/* Style the "Add" button */
+ .addBtn{
+  font-family:blacklist;
+  background-color:#f2cbff;
+  padding:0.8em;
+  position:relative;
+  left:-4px;
+  top:1.5px;
+}
+.addBtn:hover {
+  background-color:#a0f6d4;
+}
+footer{
+  font-family:blacklist;
+  background-color:white;
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+  position:fixed;
+  bottom:0;
+}
